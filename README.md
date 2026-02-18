@@ -1,6 +1,11 @@
 # voice-asistant
 
-This is a simple voice assistant script that uses your microphone to listen and perform actions like playing YouTube videos, searching Google, sending WhatsApp messages, and basic system commands.
+This is a versatile voice assistant script that uses your microphone to listen and perform actions like opening any application, playing/pausing music, searching the web, and more.
+
+**Key Features**
+- **Smart Open**: Can open *any* application or website. If an app isn't found locally, it automatically searches and opens the official website.
+- **Media Control**: Voice commands to stop/pause/play music globally (Youtube, Spotify, etc.).
+- **Web Search**: Google search integration.
 
 **Requirements**
 - Python 3.8+ installed
@@ -20,21 +25,11 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-- **Or activate** (Command Prompt / cmd):
-
-```cmd
-.venv\Scripts\activate
-```
-
-- **Add dependencies**:
-```powershell
-    pip freeze > requirements.txt
-```
-
 - **Install dependencies**:
 
 ```powershell
 pip install -r requirements.txt
+pip install pyautogui
 ```
 
 - **Run the assistant**:
@@ -43,40 +38,16 @@ pip install -r requirements.txt
 python main.py
 ```
 
-**Windows-specific note for PyAudio**
-- If `pyaudio` fails to build on Windows, install it via `pipwin`:
+**Commands**
 
-```powershell
-pip install pipwin
-pipwin install pyaudio
-```
+| Intent | Purpose | Examples |
+| :--- | :--- | :--- |
+| **OPEN_APP** | Opens local apps or websites | "Open Notepad", "Open Gmail", "Open Youtube", "Open VS Code" |
+| **PLAY_MUSIC** | Plays video on YouTube | "Play music", "Play Ariijt Singh" |
+| **STOP_MUSIC** | Pauses/Plays current media | "Stop", "Pause music", "Shut up" |
+| **SEARCH_WEB** | Google Search | "Search Python tutorial", "Google weather" |
+| **EXIT** | Closes the assistant | "Exit", "Bye" |
 
 **Troubleshooting**
-- If microphone not detected, check Windows privacy settings and that no other app is exclusively using the device.
-- For text-to-speech voice selection issues, try changing the index in `voices[1]` in `asistant.py`.
-- If WhatsApp automation fails, ensure browser is installed and you are logged into WhatsApp Web.
-
-**Files**
-- `asistant.py` — main script
-- `requirements.txt` — dependency list
-
-**Git**
-- Initialize a new git repository and make the first commit:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - voice-asistant"
-```
-
-- (Optional) Add a remote and push to GitHub/remote:
-
-```bash
-git remote add origin <your-repo-URL>
-git branch -M main
-git push -u origin main
-```
-
-- Ensure `.gitignore` exists (it should exclude `.venv/`, `__pycache__/`, `.vscode/`, etc.).
-
-If you want, I can also install the packages into the created `.venv` now.
+- If microphone not detected, check Windows privacy settings.
+- "Stop" command simulates the `Play/Pause` media key on your keyboard. Ensure your media player supports this key.

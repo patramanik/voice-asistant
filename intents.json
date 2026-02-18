@@ -28,10 +28,20 @@
       ]
     },
     {
+      "intent": "STOP_MUSIC",
+      "examples": [
+        "stop playing",
+        "pause music",
+        "stop song",
+        "pause",
+        "shut up",
+        "stop"
+      ]
+    },
+    {
       "intent": "EXIT",
       "examples": [
         "exit",
-        "stop",
         "bye",
         "close assistant"
       ]
