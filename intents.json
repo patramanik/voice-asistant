@@ -1,0 +1,40 @@
+{
+  "intents": [
+    {
+      "intent": "OPEN_APP",
+      "examples": [
+        "open chrome",
+        "launch calculator",
+        "start notepad",
+        "open whatsapp",
+        "run spotify"
+      ]
+    },
+    {
+      "intent": "PLAY_MUSIC",
+      "examples": [
+        "play music",
+        "play song",
+        "play arijit singh",
+        "start music"
+      ]
+    },
+    {
+      "intent": "SEARCH_WEB",
+      "examples": [
+        "search python tutorial",
+        "google weather",
+        "find hotels nearby"
+      ]
+    },
+    {
+      "intent": "EXIT",
+      "examples": [
+        "exit",
+        "stop",
+        "bye",
+        "close assistant"
+      ]
+    }
+  ]
+}
