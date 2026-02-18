@@ -26,6 +26,11 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
+- **Add dependencies**:
+```powershell
+    pip freeze > requirements.txt
+```
+
 - **Install dependencies**:
 
 ```powershell
@@ -35,7 +40,7 @@ pip install -r requirements.txt
 - **Run the assistant**:
 
 ```powershell
-python asistant.py
+python main.py
 ```
 
 **Windows-specific note for PyAudio**
@@ -52,7 +57,26 @@ pipwin install pyaudio
 - If WhatsApp automation fails, ensure browser is installed and you are logged into WhatsApp Web.
 
 **Files**
-- [asistant.py](asistant.py) — main script
-- [requirements.txt](requirements.txt) — dependency list
+- `asistant.py` — main script
+- `requirements.txt` — dependency list
+
+**Git**
+- Initialize a new git repository and make the first commit:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit - voice-asistant"
+```
+
+- (Optional) Add a remote and push to GitHub/remote:
+
+```bash
+git remote add origin <your-repo-URL>
+git branch -M main
+git push -u origin main
+```
+
+- Ensure `.gitignore` exists (it should exclude `.venv/`, `__pycache__/`, `.vscode/`, etc.).
 
 If you want, I can also install the packages into the created `.venv` now.
